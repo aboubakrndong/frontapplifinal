@@ -1,0 +1,24 @@
+<mgl-map class="mglmap"
+         [style]="style"
+         [zoom]="[6]"
+         [center]="[-16.761909, 14.4682818]"
+>
+    <!-- code des boutons-->
+    
+    <mgl-control mglFullscreen></mgl-control>
+    <mgl-contrgit inintol mglNavigation></mgl-contrgitol>
+    
+    <!-- fin code des boutons-->
+
+<mat-radio-group [ngModel]="layerId" (ngModelChange)="changeStyle($event)">
+    <mat-label class="labelvue">  Choisir la vue : </mat-label>
+    <mat-radio-button value="dark">Dark</mat-radio-button>
+    <mat-radio-button value="basic">Basic</mat-radio-button>
+    <mat-radio-button value="satellite">Satellite</mat-radio-button>
+
+    <button class="btn btn-sm"
+            (click)="Succes()" style="margin-left: 30px">
+        <span class="d-none d-md-inline"></span>
+    </button>
+
+</mat-radio-group>
